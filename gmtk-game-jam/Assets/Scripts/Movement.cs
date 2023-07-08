@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float playerSpeed;
+    public float pullSpeed;
     public Rigidbody2D rigidbody;
     //Bravery meter
     //scared - brave - chaos
@@ -70,11 +71,15 @@ public class Movement : MonoBehaviour
             }
         }
 
-        //Are we a weapon?
-        Weapons();
+        if (!isSwinging)
+        {
+            //Are we a weapon?
+            Weapons();
 
-        //Are we a bomb?
-        BombBlow();
+            //Are we a bomb?
+            BombBlow();
+        }
+
     }
 
     public void Weapons()
@@ -120,6 +125,7 @@ public class Movement : MonoBehaviour
 
     IEnumerator SwordBurstCor()
     {
+        isSwinging = true;
         swordBurst.Emit(100);
 
         float time = 0f;
@@ -130,6 +136,8 @@ public class Movement : MonoBehaviour
             theSwordBox.enabled = true;
             time += Time.deltaTime;
             theSword.transform.localRotation = Quaternion.Slerp(start, end, time / swingTime);
+            rigidbody.transform.position = Vector2.MoveTowards(rigidbody.transform.position, mousePos, time / pullSpeed);
+
             yield return null;
         }
         time = 0f;
@@ -140,6 +148,7 @@ public class Movement : MonoBehaviour
             theSword.transform.localRotation = Quaternion.Slerp(end, start, time / swingTime);
             yield return null;
         }
+        isSwinging = false;
     }
 
     IEnumerator SpearBurstCor()
@@ -169,19 +178,11 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
-
-       // var targetVector = (target.transform.position - transform.position).normalized;
-       // body2D.velocity = (targetVector * playerSpeed);
-      //  transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
-
         rigidbody.MovePosition(rigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
-        //theSwordRig.MovePosition(theSwordRig.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDirection = mousePos - rigidbody.position;
-        //Vector2 lookDirectionW = mousePos - theSwordRig.position;
 
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-        //float angleW = Mathf.Atan2(lookDirectionW.y, lookDirectionW.x) * Mathf.Rad2Deg - 90f;
         rigidbody.rotation = angle;
         angleToFace = angle;
 
