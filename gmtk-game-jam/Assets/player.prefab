@@ -4982,6 +4982,9 @@ MonoBehaviour:
   isSheild: 0
   isBomb: 0
   bombBurst: {fileID: 3195844189693814532}
+  maxChainDistance: 0
+  returnTime: 0
+  returnPull: 0
 --- !u!61 &1921704323939161207
 BoxCollider2D:
   m_ObjectHideFlags: 0
