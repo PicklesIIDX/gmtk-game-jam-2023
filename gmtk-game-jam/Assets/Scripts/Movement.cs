@@ -39,11 +39,18 @@ public class Movement : MonoBehaviour
     public bool isBomb;
     public ParticleSystem bombBurst;
 
+    public float maxChainDistance;
+    float currentChainDistance;
+    public float returnTime;
+    public float returnPull;
+    bool returningWeapon = false;
+
     // Update is called once per frame
     void Update()
     {
         InputCommands();
         AnimationControl.UpdateAnimator(movementDirection);
+        WeaponChain();
     }
 
     private void FixedUpdate()
@@ -179,7 +186,19 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
-        rigidbody.MovePosition(rigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
+        currentChainDistance = Vector3.Distance(rigidbody.transform.position, personRigidbody.transform.position);
+        if (maxChainDistance < currentChainDistance)
+        {
+            if (!returningWeapon)
+            {
+                StartCoroutine(WeaponChain());
+            }
+            //rigidbody.MovePosition(personRigidbody.position + movementDirection.normalized * returnSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            //rigidbody.MovePosition(rigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
+        }
         personRigidbody.MovePosition(personRigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
         Vector2 lookDirection = mousePos - rigidbody.position;
 
@@ -190,5 +209,19 @@ public class Movement : MonoBehaviour
         //theSwordRig.rotation = angleW;
         
 
+    }
+
+    IEnumerator WeaponChain()
+    {
+        rigidbody.velocity = Vector2.zero;
+        returningWeapon = true;
+        float time = 0f;
+        while (time < returnTime)
+        {
+            time += Time.deltaTime;
+            rigidbody.transform.position = Vector2.MoveTowards(rigidbody.transform.position, personRigidbody.transform.position, time / returnPull);
+            yield return null;
+        }
+        returningWeapon = false;
     }
 }
