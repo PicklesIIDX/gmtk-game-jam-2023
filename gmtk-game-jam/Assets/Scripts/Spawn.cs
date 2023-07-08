@@ -8,6 +8,8 @@
 	{
 		[SerializeField] public GameObject objectToSpawn;
 		[SerializeField] public UnityEvent<GameObject> onSpawn;
+		[SerializeField] public float innerMin = 1;
+		[SerializeField] public float outerMax = 6;
 
 		public void InstantiateAt(Vector3 position)
 		{
@@ -17,7 +19,7 @@
 		}
 		public void Instantiate()
 		{
-			InstantiateAt(PositionGetter.RandomNearbyPosition(Vector3.zero));
+			InstantiateAt(PositionGetter.RandomNearbyPosition(Vector3.zero, innerMin, outerMax));
 		}
 	}
 }

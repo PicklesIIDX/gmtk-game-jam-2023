@@ -16,7 +16,7 @@
 
 		[SerializeField] private Spawn _heroSpawn;
 
-		private void Start()
+		private void Awake()
 		{
 			_heroSpawn.onSpawn.AddListener(OnHeroSpawn);
 			document.rootVisualElement.visible = false;
