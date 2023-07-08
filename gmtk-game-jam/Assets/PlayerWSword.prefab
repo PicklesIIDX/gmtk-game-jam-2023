@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1921704323939161207, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2469160400191454780, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
       propertyPath: m_Name
       value: GamersWanted
@@ -315,6 +319,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3944871286159827950}
     - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
+      propertyPath: returnPull
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
+      propertyPath: returnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
       propertyPath: personRigidbody
       value: 
       objectReference: {fileID: 1140835555565173930}
@@ -322,6 +334,10 @@ PrefabInstance:
       propertyPath: AnimationControl
       value: 
       objectReference: {fileID: 5268206695929599291}
+    - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
+      propertyPath: maxChainDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5460604102653992894, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
       propertyPath: m_IsActive
       value: 0
