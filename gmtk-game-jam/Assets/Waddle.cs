@@ -21,8 +21,15 @@ public class Waddle : StateMachineBehaviour
 		{
 			animator.SetBool("reachedPosition", true);
 		}
-		var distanceToHero = Vector2.Distance(_hero.transform.position, _mover.transform.position);
-		animator.SetFloat("distanceToHero", distanceToHero);
+		if (_hero)
+		{
+			var distanceToHero = Vector2.Distance(_hero.transform.position, _mover.transform.position);
+			animator.SetFloat("distanceToHero", distanceToHero);
+		}
+		else
+		{
+			animator.SetFloat("distanceToHero", 99);
+		}
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
