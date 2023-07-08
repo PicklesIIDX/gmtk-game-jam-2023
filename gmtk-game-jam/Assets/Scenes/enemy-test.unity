@@ -215,46 +215,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &377744268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3680589332869974735, guid: dd62726f8946da94b851286b1b995115, type: 3}
-  m_PrefabInstance: {fileID: 7329794548118530713}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &377744271
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377744268}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &387717098
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +392,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1901931206}
+  - component: {fileID: 1901931208}
+  - component: {fileID: 1901931207}
+  - component: {fileID: 1901931209}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -455,6 +418,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1901931207
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901931205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &1901931208
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901931205}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1901931209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901931205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9c66292243d0b4b9ed9ebdee22bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
 --- !u!1 &2028153968
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +504,9 @@ GameObject:
   - component: {fileID: 2028153971}
   - component: {fileID: 2028153970}
   - component: {fileID: 2028153969}
+  - component: {fileID: 2028153974}
+  - component: {fileID: 2028153973}
+  - component: {fileID: 2028153972}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -485,11 +526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7008227bdd7a8f1429ca87b2b6521d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1901931205}
-  range: 2
-  attackObject: {fileID: 6268195178256561229, guid: dd62726f8946da94b851286b1b995115, type: 3}
-  attackCooldown: 1
-  attackTimer: 0
+  mover: {fileID: 2028153974}
+  attacker: {fileID: 2028153973}
 --- !u!50 &2028153970
 Rigidbody2D:
   serializedVersion: 4
@@ -533,6 +571,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028153972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028153968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca65971d806e4592a0250ba52835a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  timer: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2028153973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028153968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7eefddf73164c85adafc668bb955385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackObject: {fileID: 6268195178256561229, guid: dd62726f8946da94b851286b1b995115, type: 3}
+  attackReady: 0
+  timer: {fileID: 2028153972}
+--- !u!114 &2028153974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028153968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d77d213efb4458d9389839b791b784e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1901931205}
+  range: 1.5
+  body2D: {fileID: 2028153970}
+  speed: 2
 --- !u!1001 &7329794548118530713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,8 +678,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3680589332869974735, guid: dd62726f8946da94b851286b1b995115, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 377744271}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd62726f8946da94b851286b1b995115, type: 3}
