@@ -4870,7 +4870,7 @@ Transform:
   - {fileID: 5588890869639246711}
   - {fileID: 7707765194575988283}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5070123567425049455
 SpriteRenderer:
@@ -4879,7 +4879,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2469160400191454780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4965,6 +4965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 7
   rigidbody: {fileID: 7630091221171767375}
+  AnimationControl: {fileID: 4708163529431506395}
   legControl: 1
   swingTime: 0.15
   isSword: 1
@@ -19995,6 +19996,18 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4378088905205784613, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 23.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378088905205784613, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 23.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378088905205784613, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 23.8714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378088905205784613, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -20039,6 +20052,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
+--- !u!114 &4708163529431506395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1685369881722764229, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}
+  m_PrefabInstance: {fileID: 6211980330229622302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2e71e825618f4381f302bce337e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7707765194575988283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4378088905205784613, guid: 580ae65179520f94f93e98789bf1bcfc, type: 3}

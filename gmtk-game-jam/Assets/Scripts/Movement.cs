@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 inputDirection;
     float angleToFace;
+    public HeroAnimationControl AnimationControl;
 
     Vector2 mousePos;
 
@@ -40,6 +41,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         InputCommands();
+        AnimationControl.UpdateAnimator(movementDirection);
     }
 
     private void FixedUpdate()
@@ -184,6 +186,7 @@ public class Movement : MonoBehaviour
         angleToFace = angle;
 
         //theSwordRig.rotation = angleW;
+        
 
     }
 }
