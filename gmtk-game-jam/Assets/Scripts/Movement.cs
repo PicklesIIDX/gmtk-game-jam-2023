@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public float playerSpeed;
     public float pullSpeed;
     public Rigidbody2D rigidbody;
+    public Rigidbody2D personRigidbody;
     //Bravery meter
     //scared - brave - chaos
     private Vector2 movementDirection;
@@ -136,7 +137,7 @@ public class Movement : MonoBehaviour
             theSwordBox.enabled = true;
             time += Time.deltaTime;
             theSword.transform.localRotation = Quaternion.Slerp(start, end, time / swingTime);
-            rigidbody.transform.position = Vector2.MoveTowards(rigidbody.transform.position, mousePos, time / pullSpeed);
+            personRigidbody.transform.position = Vector2.MoveTowards(personRigidbody.transform.position, mousePos, time / pullSpeed);
 
             yield return null;
         }
@@ -179,7 +180,7 @@ public class Movement : MonoBehaviour
     void Move()
     {
         rigidbody.MovePosition(rigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
-
+        personRigidbody.MovePosition(personRigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
         Vector2 lookDirection = mousePos - rigidbody.position;
 
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;

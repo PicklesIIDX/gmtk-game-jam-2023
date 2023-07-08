@@ -4965,7 +4965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7
-  pullSpeed: 0
+  pullSpeed: 1
   rigidbody: {fileID: 7630091221171767375}
   AnimationControl: {fileID: 4708163529431506395}
   legControl: 1
