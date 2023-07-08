@@ -284,6 +284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5268203227312574068, guid: 2e53f9c156fa75343af1b7bf7f0fc065, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770438266796141153, guid: 2e53f9c156fa75343af1b7bf7f0fc065, type: 3}
       propertyPath: m_Name
       value: PlayerWSword
