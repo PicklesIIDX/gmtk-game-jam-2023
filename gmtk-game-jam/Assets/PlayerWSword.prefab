@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1140835555565173930}
   - component: {fileID: 8728880494493033231}
   - component: {fileID: -6425152222810909690}
+  - component: {fileID: 4434796803820990170}
   m_Layer: 6
   m_Name: PlayerWSword
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 6220096051460358178}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1250022109477738776
 SpriteRenderer:
@@ -151,7 +152,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8728880494493033231
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,8 +210,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9c66292243d0b4b9ed9ebdee22bc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 5
   onZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4434796803820990170}
+        m_TargetAssemblyTypeName: DefaultNamespace.Spawn, Assembly-CSharp
+        m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4434796803820990170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770438266796141153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa13ad9e2a184d398a179e6334a1e9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 1329374900591076362, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
+  onSpawn:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &6871780559005477793

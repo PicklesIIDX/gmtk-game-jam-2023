@@ -4841,8 +4841,6 @@ GameObject:
   - component: {fileID: 7630091221171767375}
   - component: {fileID: 3908262189827364545}
   - component: {fileID: 1921704323939161207}
-  - component: {fileID: 2069997600421478215}
-  - component: {fileID: 8506304580382893503}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -4871,7 +4869,7 @@ Transform:
   - {fileID: 5588890869639246711}
   - {fileID: 7707765194575988283}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5070123567425049455
 SpriteRenderer:
@@ -4967,6 +4965,7 @@ MonoBehaviour:
   playerSpeed: 7
   pullSpeed: 1
   rigidbody: {fileID: 7630091221171767375}
+  personRigidbody: {fileID: 0}
   AnimationControl: {fileID: 4708163529431506395}
   legControl: 1
   swingTime: 0.15
@@ -5028,47 +5027,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.24, y: 15.36}
   m_EdgeRadius: 0
---- !u!114 &2069997600421478215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469160400191454780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb9c66292243d0b4b9ed9ebdee22bc94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  onZero:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8506304580382893503}
-        m_TargetAssemblyTypeName: DefaultNamespace.Spawn, Assembly-CSharp
-        m_MethodName: Instantiate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8506304580382893503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469160400191454780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa13ad9e2a184d398a179e6334a1e9f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 1329374900591076362, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
 --- !u!1 &2734175803469285152
 GameObject:
   m_ObjectHideFlags: 0
@@ -19839,7 +19797,7 @@ BoxCollider2D:
   m_Offset: {x: 0.51, y: 2.89}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.34561127, y: 0.030485597}
+    pivot: {x: 0.3374728, y: 0.03704729}
     oldSize: {x: 3.44, y: 6.4}
     newSize: {x: 3.44, y: 6.4}
     adaptiveTilingThreshold: 0.5
