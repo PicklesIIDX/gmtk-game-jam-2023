@@ -1,10 +1,13 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Hurtable : MonoBehaviour
 {
 	[SerializeField] public float hp = 1.0f;
 	// Start is called before the first frame update
+
+	[SerializeField] public UnityEvent onZero;
 	void Start()
 	{
 		
@@ -26,6 +29,7 @@ public class Hurtable : MonoBehaviour
 		hp -= damage;
 		if (hp <= 0)
 		{
+			onZero.Invoke();
 			Destroy(gameObject);
 		}
 	}
