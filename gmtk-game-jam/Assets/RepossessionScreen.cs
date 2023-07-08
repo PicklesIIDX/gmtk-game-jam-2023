@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
-public class RepossesionScreen : MonoBehaviour
+public class RepossessionScreen : MonoBehaviour
 {
 
     [SerializeField] private UIDocument document;
@@ -13,7 +13,7 @@ public class RepossesionScreen : MonoBehaviour
 
     [SerializeField] private GameObject enemy;
 
-    [SerializeField] private UnityEvent onSelectPossession;
+    [SerializeField] private UnityEvent<ItemSelection> onSelectPossession;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -41,9 +41,8 @@ public class RepossesionScreen : MonoBehaviour
     {
         return new[]
         {
-            new ItemSelection() { Item = "SWORD" },
-            new ItemSelection() { Item = "KEY" },
-            new ItemSelection() { Item = "BOOTS" },
+            new ItemSelection() { Item = "SWORD", Position = Vector3.zero},
+            new ItemSelection() { Item = "BOOTS", Position = Vector3.zero},
         };
     }
 
@@ -53,7 +52,7 @@ public class RepossesionScreen : MonoBehaviour
         document.rootVisualElement.visible = false;
 
         Time.timeScale = 1.0f;
-        onSelectPossession.Invoke();
+        onSelectPossession.Invoke(evt);
     }
 
     public void ListenToHeroDeath(GameObject heroInstance)
@@ -87,7 +86,18 @@ public class RepossesionScreen : MonoBehaviour
     }
 }
 
-internal struct ItemSelection
+public struct ItemSelection
 {
     public string Item;
+    public Vector3 Position;
+
+    public bool IsSword()
+    {
+        return Item == "SWORD";
+    }
+
+    public bool IsBoots()
+    {
+        return Item == "BOOTS";
+    }
 }

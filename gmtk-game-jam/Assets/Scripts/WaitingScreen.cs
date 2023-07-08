@@ -14,17 +14,33 @@
 		[SerializeField] private UIDocument document;
 		[SerializeField] private UnityEvent onWaitingComplete;
 
-		public void OnEnable()
+		[SerializeField] private Spawn _heroSpawn;
+
+		private void Start()
 		{
+			_heroSpawn.onSpawn.AddListener(OnHeroSpawn);
+			document.rootVisualElement.visible = false;
 			_textElement = document.rootVisualElement.Q<TextElement>("waiting-for");
-			StartCoroutine(WaitForPickup());
+		}
+
+		private void OnHeroSpawn(GameObject heroObject)
+		{
+			var movement = heroObject.GetComponentInChildren<Movement>();
+			if (movement)
+			{
+				movement.isSword = itemSelection.IsSword();
+				movement.legControl = itemSelection.IsBoots();
+			}
+			heroObject.transform.position = itemSelection.Position;
 		}
 
 		[SerializeField] private AnimationCurve animationCurve;
 		private TextElement _textElement;
+		private ItemSelection itemSelection;
 
 		private IEnumerator WaitForPickup()
 		{
+			document.rootVisualElement.visible = true;
 			yield return new WaitForSecondsRealtime(0.5f);
 			int targetTime = Random.Range(1, 1000000);
 			var time = 0f;
@@ -47,7 +63,14 @@
 				yield return null;
 			}
 			yield return new WaitForSecondsRealtime(0.5f);
+			document.rootVisualElement.visible = false;
 			onWaitingComplete.Invoke();
+		}
+
+		public void Possession(ItemSelection itemSelection)
+		{
+			this.itemSelection = itemSelection;
+			StartCoroutine(WaitForPickup());
 		}
 	}
 }
