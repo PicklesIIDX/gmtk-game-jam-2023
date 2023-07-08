@@ -11,4 +11,16 @@ public abstract class PositionGetter
 		var randomPositionOnScreen = new Vector3(x, y);
 		return randomPositionOnScreen;
 	}
+	
+	
+	public static Vector3 FindNewPosition()
+	{
+		var player = FindPlayer();
+		return player ? player.transform.position : RandomPositionOnScreen();
+	}
+
+	public static GameObject FindPlayer()
+	{
+		return GameObject.FindWithTag("Player");
+	}
 }

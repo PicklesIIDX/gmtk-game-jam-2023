@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6511572250877795231}
   - component: {fileID: 9030893632910654383}
-  - component: {fileID: 3940537947807069761}
   - component: {fileID: 7236305611414145628}
   - component: {fileID: 1914039524856981947}
-  - component: {fileID: 304572730014800265}
   - component: {fileID: 3538690537973962541}
   - component: {fileID: 6673758375516386788}
-  - component: {fileID: -8400146373812004428}
+  - component: {fileID: 5307112635831931752}
+  - component: {fileID: 6926068361473386075}
   m_Layer: 7
   m_Name: enemy
   m_TagString: Untagged
@@ -38,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 3783235166817629268}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &9030893632910654383
 Rigidbody2D:
@@ -67,20 +66,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3940537947807069761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4180787791879720077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7008227bdd7a8f1429ca87b2b6521d0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mover: {fileID: 7236305611414145628}
-  attacker: {fileID: 1914039524856981947}
 --- !u!114 &7236305611414145628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,11 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d77d213efb4458d9389839b791b784e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   range: 1.5
   body2D: {fileID: 9030893632910654383}
   speed: 2
-  findNewPositionTimer: {fileID: -8400146373812004428}
+  TargetPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1914039524856981947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,25 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackObject: {fileID: 6268195178256561229, guid: dd62726f8946da94b851286b1b995115, type: 3}
-  attackReady: 0
-  timer: {fileID: 304572730014800265}
---- !u!114 &304572730014800265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4180787791879720077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca65971d806e4592a0250ba52835a3dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 1
-  timer: 0.1
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3538690537973962541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +156,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-8400146373812004428
+--- !u!114 &5307112635831931752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,14 +165,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 4180787791879720077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca65971d806e4592a0250ba52835a3dd, type: 3}
+  m_Script: {fileID: 11500000, guid: be4d3f5737514ffaa75cc4a783fb4dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 5
-  timer: 0
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
+  animator: {fileID: 6926068361473386075}
+--- !u!95 &6926068361473386075
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180787791879720077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e12770c70cf8384ca2958b0879d40d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5894972849238936455
 GameObject:
   m_ObjectHideFlags: 0
