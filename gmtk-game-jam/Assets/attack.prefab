@@ -93,9 +93,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3314674710361385248}
-  - component: {fileID: 1734085345065081021}
   - component: {fileID: 2887430213896750651}
   - component: {fileID: 5694434835489254957}
+  - component: {fileID: 231683804058818412}
+  - component: {fileID: 971003846737219851}
+  - component: {fileID: 66656464905424971}
   m_Layer: 0
   m_Name: attack
   m_TagString: Untagged
@@ -119,20 +121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1734085345065081021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268195178256561229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f3a0dad374af44686bdafb126d40b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifetime: 0.5
-  damage: 0.5
 --- !u!50 &2887430213896750651
 Rigidbody2D:
   serializedVersion: 4
@@ -195,3 +183,58 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &231683804058818412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268195178256561229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca65971d806e4592a0250ba52835a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  timer: 0.5
+  onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 971003846737219851}
+        m_TargetAssemblyTypeName: Hurtable, Assembly-CSharp
+        m_MethodName: Hurt
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &971003846737219851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268195178256561229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9c66292243d0b4b9ed9ebdee22bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+--- !u!114 &66656464905424971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268195178256561229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe443dbda9c592d4a9e622d9aaac76ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
