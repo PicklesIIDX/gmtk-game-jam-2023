@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Mover : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Mover : MonoBehaviour
 	[SerializeField] private Rigidbody2D body2D;
 	[SerializeField] private float speed = 1.0f;
 	public Vector3 TargetPosition;
+	public UnityEvent<Vector2> onMove;
 
 
 	public bool Move()
@@ -16,6 +18,7 @@ public class Mover : MonoBehaviour
 			if (AtTarget(TargetPosition))
 			{
 				body2D.velocity = Vector2.zero;
+				onMove.Invoke(body2D.velocity);
 				return true;
 			}
 			else
@@ -23,6 +26,7 @@ public class Mover : MonoBehaviour
 				var targetVector = (TargetPosition - transform.position).normalized;
 				body2D.velocity = (targetVector * speed);
 				transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
+				onMove.Invoke(body2D.velocity);
 			}
 		}
 		return false;
@@ -39,5 +43,6 @@ public class Mover : MonoBehaviour
 	{
 		body2D.velocity = Vector2.zero;
 		body2D.totalTorque = 0;
+		onMove.Invoke(body2D.velocity);
 	}
 }
