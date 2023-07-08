@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class RepossesionScreen : MonoBehaviour
@@ -11,6 +12,8 @@ public class RepossesionScreen : MonoBehaviour
     [SerializeField] private GameObject newHero;
 
     [SerializeField] private GameObject enemy;
+
+    [SerializeField] private UnityEvent onSelectPossession;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -47,16 +50,15 @@ public class RepossesionScreen : MonoBehaviour
     private void OnSelectItem(ClickEvent clickEvent, ItemSelection evt)
     {
         Debug.Log($"selected {evt.Item}");
-        var newHeroInstance = GameObject.Instantiate(newHero);
-        newHeroInstance.transform.position = new Vector3(Random.Range(-1,1), Random.Range(-1,1));
-        newHeroInstance.GetComponent<Hurtable>().onZero.AddListener(OnHeroDeath);
-        var newEnemyInstance = GameObject.Instantiate(enemy);
-
-        var randomPositionOnScreen = PositionGetter.RandomPositionOnScreen();
-        newEnemyInstance.transform.position = randomPositionOnScreen;
         document.rootVisualElement.visible = false;
 
         Time.timeScale = 1.0f;
+        onSelectPossession.Invoke();
+    }
+
+    public void ListenToHeroDeath(GameObject heroInstance)
+    {
+        heroInstance.GetComponent<Hurtable>().onZero.AddListener(OnHeroDeath);
     }
 
     private void OnHeroDeath(GameObject hero)
