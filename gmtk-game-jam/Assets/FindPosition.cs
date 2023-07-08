@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class FindPosition : StateMachineBehaviour
 {
+    public enum FindType
+    {
+        None,
+        TargetHero,
+        AvoidHero,
+    }
+
+    [SerializeField] private FindType _findType = FindType.TargetHero;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var mover = animator.GetComponent<Mover>();
-        var position = PositionGetter.FindNewPosition();
+        var position = mover.transform.position;
+        switch (_findType)
+        {
+            case FindType.TargetHero:
+                position = PositionGetter.FindNewPosition();
+                break;
+            case FindType.AvoidHero:
+                position = PositionGetter.FindPositionAwayFromHero(mover.transform.position, 6f);
+                break;
+        }
         mover.TargetPosition = position;
         animator.SetBool("hasPosition", true);
         animator.SetFloat("distanceToHero", 99);

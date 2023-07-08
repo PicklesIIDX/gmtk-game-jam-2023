@@ -78,10 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d77d213efb4458d9389839b791b784e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.5
+  range: 0.1
   body2D: {fileID: 9030893632910654383}
-  speed: 2
+  speed: 6
   TargetPosition: {x: 0, y: 0, z: 0}
+  onMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1914039524856981947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +182,7 @@ Animator:
   m_GameObject: {fileID: 4180787791879720077}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e12770c70cf8384ca2958b0879d40d1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 64dedba60f62fd946b0f6d0a6e6803cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

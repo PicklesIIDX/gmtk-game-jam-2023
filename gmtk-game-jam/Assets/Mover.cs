@@ -45,4 +45,10 @@ public class Mover : MonoBehaviour
 		body2D.totalTorque = 0;
 		onMove.Invoke(body2D.velocity);
 	}
+	
+	
+	private void OnDrawGizmosSelected()
+	{
+		Gizmos.DrawSphere(TargetPosition, .1f);
+	}
 }

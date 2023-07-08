@@ -19,6 +19,18 @@ public abstract class PositionGetter
 		return player ? player.transform.position : RandomPositionOnScreen();
 	}
 
+	public static Vector3 FindPositionAwayFromHero(Vector3 currentPosition, float distance)
+	{
+		var player = FindPlayer();
+		if (player)
+		{
+			var vectorToPlayer = player.transform.position - currentPosition;
+			var perpendicular = Vector3.Cross(vectorToPlayer, Vector3.forward).normalized;
+			return player.transform.position + vectorToPlayer + perpendicular * Random.Range(-distance, distance);
+		}
+		return RandomPositionOnScreen();
+	}
+
 	public static GameObject FindPlayer()
 	{
 		return GameObject.FindWithTag("Player");
