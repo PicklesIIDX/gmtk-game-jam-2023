@@ -12,6 +12,7 @@ public class FindPosition : StateMachineBehaviour
     }
 
     [SerializeField] private FindType _findType = FindType.TargetHero;
+    [SerializeField] private float _maxHuntRange = 8.0f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -20,7 +21,7 @@ public class FindPosition : StateMachineBehaviour
         switch (_findType)
         {
             case FindType.TargetHero:
-                position = PositionGetter.FindNewPosition();
+                position = PositionGetter.FindNewPositionNearHeroWithinRange(mover.transform.position, _maxHuntRange);
                 break;
             case FindType.AvoidHero:
                 position = PositionGetter.FindPositionAwayFromHero(mover.transform.position, 6f);

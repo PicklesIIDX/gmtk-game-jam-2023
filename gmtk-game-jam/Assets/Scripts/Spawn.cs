@@ -16,7 +16,7 @@
 		}
 		public void Instantiate()
 		{
-			InstantiateAt(PositionGetter.RandomPositionOnScreen());
+			InstantiateAt(PositionGetter.RandomNearbyPosition(Vector3.zero));
 		}
 	}
 }
