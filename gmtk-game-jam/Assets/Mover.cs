@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -8,34 +9,42 @@ public class Mover : MonoBehaviour
 	[SerializeField] public float range = 2.0f;
 	[SerializeField] private Rigidbody2D body2D;
 	[SerializeField] private float speed = 1.0f;
+	private Vector3 _targetPosition;
+	[SerializeField] private Timer findNewPositionTimer;
 
-	public void Move()
+	private void Start()
 	{
-		if (target)
-		{
-			if (body2D)
-			{
-				if (AtTarget())
-				{
-					body2D.velocity = Vector2.zero;
-				}
-				else
-				{
-					var targetVector = (target.transform.position - transform.position).normalized;
-					body2D.velocity = (targetVector * speed);
-					transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
-				}
-			}
-		}
+		findNewPositionTimer.onComplete.AddListener(FindNewPosition);
 	}
 
-	public bool AtTarget()
+	public bool Move()
 	{
-		if (!target)
+		if (body2D)
 		{
-			return false;
+			if (AtTarget(_targetPosition))
+			{
+				body2D.velocity = Vector2.zero;
+				return true;
+			}
+			else
+			{
+				var targetVector = (_targetPosition - transform.position).normalized;
+				body2D.velocity = (targetVector * speed);
+				transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
+			}
 		}
-		var distance = Vector2.Distance(target.transform.position, transform.position);
+		return false;
+	}
+
+	private void FindNewPosition()
+	{
+		var player = GameObject.FindWithTag("Player");
+		_targetPosition = player ? player.transform.position : PositionGetter.RandomPositionOnScreen();
+	}
+
+	public bool AtTarget(Vector3 targetPosition)
+	{
+		var distance = Vector2.Distance(targetPosition, transform.position);
 		return distance <= range;
 	}
 }

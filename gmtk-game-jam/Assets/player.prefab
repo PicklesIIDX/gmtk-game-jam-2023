@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 2069997600421478215}
   m_Layer: 6
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4964,6 +4964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7
+  pullSpeed: 0
   rigidbody: {fileID: 7630091221171767375}
   AnimationControl: {fileID: 4708163529431506395}
   legControl: 1

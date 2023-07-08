@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{ 
-		mover.Move();
-		if (mover.AtTarget())
+		bool isAtTarget = mover.Move();
+		if (isAtTarget)
 		{
 			attacker.Attack(transform.position, transform.rotation, gameObject.layer);
 		}

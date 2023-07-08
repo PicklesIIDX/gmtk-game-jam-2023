@@ -2,7 +2,6 @@
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
         <ui:Label tabindex="-1" text="YOUR HERO HAS DIED" display-tooltip-when-elided="true" style="justify-content: center; align-items: center; -unity-text-align: middle-center;" />
         <ui:Label tabindex="-1" text="Select an item to posses" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
-        <ui:Button text="ITEM 1" display-tooltip-when-elided="true" name="item1" />
-        <ui:Button text="ITEM 2" display-tooltip-when-elided="true" name="item2" />
+        <ui:VisualElement name="button-holder" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
     </ui:VisualElement>
 </ui:UXML>
