@@ -18,7 +18,7 @@
 		}
 		public void Instantiate()
 		{
-			InstantiateAt(PositionGetter.RandomNearbyPosition(Vector3.zero, innerMin, outerMax));
+			InstantiateAt(PositionGetter.RandomNearbyPosition(transform.position, innerMin, outerMax));
 		}
 	}
 }
