@@ -225,6 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  onZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &66656464905424971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,4 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe443dbda9c592d4a9e622d9aaac76ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.5

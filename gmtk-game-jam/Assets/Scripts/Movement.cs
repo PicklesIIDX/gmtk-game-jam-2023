@@ -10,20 +10,26 @@ public class Movement : MonoBehaviour
     //scared - brave - chaos
     private Vector2 movementDirection;
     private Vector2 inputDirection;
+    float angleToFace;
 
-    public Camera topCamera;
     Vector2 mousePos;
 
     public bool legControl;
     bool isMovementCorRunning = false;
 
     bool isSwinging = false;
+    public float swingTime;
+
     public bool isSword;
+    public GameObject theSword;
+    public BoxCollider2D theSwordBox;
     public ParticleSystem swordBurst;
     public bool isSpear;
+    public GameObject theSpear;
     public ParticleSystem spearBurst;
     public bool isAxe;
     public ParticleSystem axeBurst;
+    public GameObject theAxe;
 
     public bool isSheild;
 
@@ -43,7 +49,8 @@ public class Movement : MonoBehaviour
 
     void InputCommands()
     {
-        mousePos = topCamera.ScreenToWorldPoint(Input.mousePosition);
+        
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         inputDirection.x = Input.GetAxisRaw("Horizontal");
         inputDirection.y = Input.GetAxisRaw("Vertical");
 
@@ -111,9 +118,26 @@ public class Movement : MonoBehaviour
 
     IEnumerator SwordBurstCor()
     {
-        //Need to use angle taken from inputDirection.x and y to get direction it should face or use animation
         swordBurst.Emit(100);
-        yield return new WaitForSeconds(1.5f);
+
+        float time = 0f;
+        var start = Quaternion.identity;
+        var end = Quaternion.Euler(0, 0, -90);
+        while (time < swingTime)
+        {
+            theSwordBox.enabled = true;
+            time += Time.deltaTime;
+            theSword.transform.localRotation = Quaternion.Slerp(start, end, time / swingTime);
+            yield return null;
+        }
+        time = 0f;
+        while (time < swingTime)
+        {
+            theSwordBox.enabled = false;
+            time += Time.deltaTime *2;
+            theSword.transform.localRotation = Quaternion.Slerp(end, start, time / swingTime);
+            yield return null;
+        }
     }
 
     IEnumerator SpearBurstCor()
@@ -143,10 +167,23 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
+
+       // var targetVector = (target.transform.position - transform.position).normalized;
+       // body2D.velocity = (targetVector * playerSpeed);
+      //  transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
+
         rigidbody.MovePosition(rigidbody.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
+        //theSwordRig.MovePosition(theSwordRig.position + movementDirection.normalized * playerSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDirection = mousePos - rigidbody.position;
+        //Vector2 lookDirectionW = mousePos - theSwordRig.position;
+
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+        //float angleW = Mathf.Atan2(lookDirectionW.y, lookDirectionW.x) * Mathf.Rad2Deg - 90f;
         rigidbody.rotation = angle;
+        angleToFace = angle;
+
+        //theSwordRig.rotation = angleW;
+
     }
 }
