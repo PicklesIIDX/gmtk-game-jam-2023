@@ -21,7 +21,7 @@ public class Hurtable : MonoBehaviour
 
 	public void OnCollisionEnter2D(Collision2D other)
 	{
-		Debug.Log($"touched by {other}");
+		Debug.Log($"{name} touched by {other.gameObject.name}");
 	}
 
 	public void Hurt(float damage)
