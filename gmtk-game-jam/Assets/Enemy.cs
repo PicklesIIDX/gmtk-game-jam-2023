@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 		mover.Move();
 		if (mover.AtTarget())
 		{
-			attacker.Attack(transform.position, transform.rotation);
+			attacker.Attack(transform.position, transform.rotation, gameObject.layer);
 		}
 	}
 }

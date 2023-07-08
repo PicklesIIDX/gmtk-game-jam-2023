@@ -17,7 +17,7 @@ public class Attacker : MonoBehaviour
 		attackReady = true;
 	}
 
-	public void Attack(Vector3 position, Quaternion rotation)
+	public void Attack(Vector3 position, Quaternion rotation, int layer)
 	{
 		if (!attackReady)
 		{
@@ -29,6 +29,7 @@ public class Attacker : MonoBehaviour
 			var attackInstance = Instantiate(attackObject);
 			attackInstance.transform.position = position;
 			attackInstance.transform.rotation = rotation;
+			attackInstance.layer = layer;
 		}
 	}
 }
