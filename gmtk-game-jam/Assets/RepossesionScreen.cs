@@ -55,12 +55,33 @@ public class RepossesionScreen : MonoBehaviour
         var randomPositionOnScreen = PositionGetter.RandomPositionOnScreen();
         newEnemyInstance.transform.position = randomPositionOnScreen;
         document.rootVisualElement.visible = false;
+
+        Time.timeScale = 1.0f;
     }
 
     private void OnHeroDeath(GameObject hero)
     {
         //todo: get hero inventory
-        OpenPossesionScreen(GetInventory());   
+        StartCoroutine(SlowDownTime());
+    }
+
+    [SerializeField] private AnimationCurve slowdownCurve;
+    private IEnumerator SlowDownTime()
+    {
+        var time = 0f;
+        var lastFrameTime = Time.realtimeSinceStartup;
+        var slowdownDuration = slowdownCurve[slowdownCurve.length-1].time;
+        while (time < slowdownDuration)
+        {
+            var delta = Time.realtimeSinceStartup - lastFrameTime;
+            lastFrameTime = Time.realtimeSinceStartup;
+            time += delta;
+            var progress = time;
+            Time.timeScale = slowdownCurve.Evaluate(progress);
+            yield return null;
+        }
+        yield return new WaitForSecondsRealtime(0.5f);
+        OpenPossesionScreen(GetInventory()); 
     }
 }
 
