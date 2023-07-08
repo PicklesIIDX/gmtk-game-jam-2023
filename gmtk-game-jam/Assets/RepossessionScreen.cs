@@ -1,13 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class RepossessionScreen : MonoBehaviour
 {
 
     [SerializeField] private UIDocument document;
+    [SerializeField] private TimeSlowAnimator timeSlowAnimator;
     [SerializeField] private UnityEvent<ItemSelection> onSelectPossession;
 
     [SerializeField] private string startingItem = "SWORD";
@@ -62,27 +63,12 @@ public class RepossessionScreen : MonoBehaviour
     {
         //todo: get hero inventory
         var inventory = hero.GetComponentInChildren<Inventory>();
-        StartCoroutine(SlowDownTime(inventory));
-    }
-
-    [SerializeField] private AnimationCurve slowdownCurve;
-    private IEnumerator SlowDownTime(Inventory inventory)
-    {
-        var time = 0f;
-        var lastFrameTime = Time.realtimeSinceStartup;
-        var slowdownDuration = slowdownCurve[slowdownCurve.length-1].time;
-        while (time < slowdownDuration)
+        StartCoroutine(timeSlowAnimator.SlowDownTime(() =>
         {
-            var delta = Time.realtimeSinceStartup - lastFrameTime;
-            lastFrameTime = Time.realtimeSinceStartup;
-            time += delta;
-            var progress = time;
-            Time.timeScale = slowdownCurve.Evaluate(progress);
-            yield return null;
-        }
-        yield return new WaitForSecondsRealtime(0.5f);
-        OpenPossesionScreen(inventory.GetInventory()); 
+            OpenPossesionScreen(inventory.GetInventory());
+        }));
     }
+    
 }
 
 public struct ItemSelection
