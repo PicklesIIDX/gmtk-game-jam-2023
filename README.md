@@ -3,3 +3,5 @@ GMTK Game Jam 2023
 
 # credits
 PicklesIIDX
+Marty Hanapole
+Chris Cummings
