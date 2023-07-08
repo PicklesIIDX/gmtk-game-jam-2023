@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6879962402714189967}
   - component: {fileID: 9071474312205883021}
   - component: {fileID: 5681991274012943021}
+  - component: {fileID: -2498410987388055834}
   m_Layer: 0
   m_Name: clatter
   m_TagString: Untagged
@@ -197,6 +198,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2498410987388055834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329374900591076362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caef5a7625e34c459517ce493b98b299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: NONE
 --- !u!1 &6654270589375843463
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,16 +8,14 @@ public class RepossessionScreen : MonoBehaviour
 {
 
     [SerializeField] private UIDocument document;
-
-    [SerializeField] private GameObject newHero;
-
-    [SerializeField] private GameObject enemy;
-
     [SerializeField] private UnityEvent<ItemSelection> onSelectPossession;
+
+    [SerializeField] private string startingItem = "SWORD";
     // Start is called before the first frame update
     void OnEnable()
     {
-        OpenPossesionScreen(GetInventory());
+        document.rootVisualElement.visible = false;
+        onSelectPossession.Invoke(new ItemSelection(){Item = startingItem, Position = transform.position});
     }
 
     private void OpenPossesionScreen(ItemSelection[] inventory)
@@ -63,11 +61,12 @@ public class RepossessionScreen : MonoBehaviour
     private void OnHeroDeath(GameObject hero)
     {
         //todo: get hero inventory
-        StartCoroutine(SlowDownTime());
+        var inventory = hero.GetComponentInChildren<Inventory>();
+        StartCoroutine(SlowDownTime(inventory));
     }
 
     [SerializeField] private AnimationCurve slowdownCurve;
-    private IEnumerator SlowDownTime()
+    private IEnumerator SlowDownTime(Inventory inventory)
     {
         var time = 0f;
         var lastFrameTime = Time.realtimeSinceStartup;
@@ -82,7 +81,7 @@ public class RepossessionScreen : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSecondsRealtime(0.5f);
-        OpenPossesionScreen(GetInventory()); 
+        OpenPossesionScreen(inventory.GetInventory()); 
     }
 }
 
