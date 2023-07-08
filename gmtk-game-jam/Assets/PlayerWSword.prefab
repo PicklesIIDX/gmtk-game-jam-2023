@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5268206695929599291}
   - component: {fileID: 1140835555565173930}
   - component: {fileID: 8728880494493033231}
+  - component: {fileID: -6425152222810909690}
   m_Layer: 6
   m_Name: PlayerWSword
   m_TagString: Untagged
@@ -196,6 +197,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0848708}
   m_EdgeRadius: 0
+--- !u!114 &-6425152222810909690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770438266796141153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9c66292243d0b4b9ed9ebdee22bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  onZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6871780559005477793
 PrefabInstance:
   m_ObjectHideFlags: 0
