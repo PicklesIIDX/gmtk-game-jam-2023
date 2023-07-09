@@ -240,6 +240,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3982705471355646530, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982705471355646530, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
+      propertyPath: m_AssetsPPU
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792167602801299413, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
+      propertyPath: orthographic size
+      value: 6.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8344688156240297976, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -260,6 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa13ad9e2a184d398a179e6334a1e9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1043599091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6667351473417733707, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
+  m_PrefabInstance: {fileID: 8399535102112957189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1287915327
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +371,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1043599091}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1386208864
 Transform:
   m_ObjectHideFlags: 0
@@ -385,7 +414,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7985264484168571837, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
   m_PrefabInstance: {fileID: 8399535102112957189}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1043599091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4a7ed4fe23c0f47a7a211d3e656a97, type: 3}
@@ -676,6 +705,10 @@ PrefabInstance:
     - target: {fileID: 6667351473417733707, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
       propertyPath: m_Name
       value: RepossessionScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667351473417733707, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7985264484168571837, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
       propertyPath: startingItem
