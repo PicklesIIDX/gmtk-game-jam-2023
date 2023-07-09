@@ -20,6 +20,7 @@ public class VictoryScreen : MonoBehaviour
         
     }
 
+    [ContextMenu("Show")]
     public void ShowVictory()
     {
         StartCoroutine(timeSlowAnimator.SlowDownTime(() =>
