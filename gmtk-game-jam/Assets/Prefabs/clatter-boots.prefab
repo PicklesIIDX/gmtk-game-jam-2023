@@ -17,8 +17,24 @@ PrefabInstance:
       value: clatter-boots
       objectReference: {fileID: 0}
     - target: {fileID: 6879962402714189967, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
+      propertyPath: delays.Array.data[0]
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879962402714189967, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
       propertyPath: forces.Array.data[0].x
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879962402714189967, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
+      propertyPath: soundVolume.Array.data[2]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879962402714189967, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
+      propertyPath: soundVolume.Array.data[3]
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879962402714189967, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
+      propertyPath: soundVolume.Array.data[4]
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8650164125154049648, guid: 4e0150f6a5cf0fc4ea8588404e65f264, type: 3}
       propertyPath: m_Sprite

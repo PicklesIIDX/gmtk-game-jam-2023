@@ -14,6 +14,7 @@ public class Hurtable : MonoBehaviour
 	public void Hurt(float damage)
 	{
 		hp -= damage;
+		HurtNoise();
 		if (hp <= 0)
 		{
 			onZero.Invoke(gameObject);
