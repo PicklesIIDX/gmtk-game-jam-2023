@@ -12,14 +12,16 @@ public class Waddle : StateMachineBehaviour
 	{
 		_mover = animator.gameObject.GetComponent<Mover>();
 		_hero = PositionGetter.FindPlayer();
+		animator.SetFloat("waddleTime", 0);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+		animator.SetFloat("waddleTime", animator.GetFloat("waddleTime") + Time.deltaTime);
 		if (_mover.Move())
 		{
-			animator.SetBool("reachedPosition", true);
+			animator.SetFloat("waddleTime", 99);
 		}
 		if (_hero)
 		{
