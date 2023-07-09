@@ -36,6 +36,7 @@
 				movement.isSword = true;
 				movement.armControl = itemSelection.IsSword();
 				movement.legControl = itemSelection.IsBoots();
+				movement.AdjustSwingPull(movement.armControl);
 				
 			}
 			heroObject.transform.position = itemSelection.Position;
