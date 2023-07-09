@@ -9,6 +9,8 @@ public class Hurtable : MonoBehaviour
 
 	[SerializeField] public UnityEvent<GameObject> onZero;
 
+	public AudioSource AudioSource;
+
 	public void Hurt(float damage)
 	{
 		hp -= damage;
@@ -17,5 +19,10 @@ public class Hurtable : MonoBehaviour
 			onZero.Invoke(gameObject);
 			Destroy(gameObject);
 		}
+	}
+
+	public void HurtNoise()
+	{
+		AudioSource.Play();
 	}
 }
