@@ -73,7 +73,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 8773e8ee5ced1494ba8924af0b0c7f36, type: 2}
   m_TargetDisplay: 0
@@ -238,9 +238,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7223363405176968198}
     m_Modifications:
+    - target: {fileID: 4209375804426210919, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4786749351644941988, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
       propertyPath: m_Name
       value: EndScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786749351644941988, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118355147377670365, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6458582201514059436, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
       propertyPath: m_RootOrder
@@ -285,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 6458582201514059436, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447194814857443732, guid: 07f4d62b4a34c184786efaeb5c1ebe42, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
