@@ -22,6 +22,7 @@ public class HeroPaletteSwap : MonoBehaviour
     public SpriteRenderer Sprite;
 
     public List<HeroPalette> AcceptablePalettes;
+    private static HeroPalette LastPalette;
     public int SelectedPalette;
     public bool next;
 
@@ -33,11 +34,22 @@ public class HeroPaletteSwap : MonoBehaviour
             SelectedPalette = (SelectedPalette + 1) % AcceptablePalettes.Count;
             SetPalette(SelectedPalette);
         }
+        if (LastPalette != null)
+        {
+            SetPalette(LastPalette);
+        }
     }
 
     private void Start()
     {
-        RandomizePalette();
+        if (gameObject.CompareTag("Player"))
+        {
+            RandomizePalette();
+        }
+        else if (LastPalette != null)
+        {
+            SetPalette(LastPalette);
+        }
     }
 
     [ContextMenu("Randomize Palette")]
@@ -59,6 +71,12 @@ public class HeroPaletteSwap : MonoBehaviour
         if (index < 0 || index >= AcceptablePalettes.Count) return;
         
         HeroPalette palette = AcceptablePalettes[index];
+        SetPalette(palette);
+    }
+
+    private void SetPalette(HeroPalette palette)
+    {
+        LastPalette = palette;
         Sprite.material.SetColor("_OutlineColor", palette.OutlineColor);
         Sprite.material.SetColor("_SkinColor", palette.SkinColor);
         Sprite.material.SetColor("_TunicMainColor", palette.TunicMainColor);
