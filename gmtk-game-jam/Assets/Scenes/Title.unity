@@ -365,7 +365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title Here
+  m_text: Repossessed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6c3ebdbdc48b95349891698154c78d62, type: 2}
   m_sharedMaterial: {fileID: 1370706835567055947, guid: 6c3ebdbdc48b95349891698154c78d62, type: 2}
@@ -1735,9 +1735,17 @@ MonoBehaviour:
     - Lighting
 
 
-    Third Party Assets
+    Third Party Assets And Tools
 
-    <insert here>
+    <size=75%>Kenney Game Assets
+    https://kenney.nl/assets
+
+    Unity
+
+    VLC
+
+    Windows Sound Recorder
+
 
 '
   m_isRightToLeft: 0
@@ -1778,7 +1786,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 20.35
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
