@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     Vector2 mousePos;
 
     public bool legControl;
+    public bool armControl;
     bool isMovementCorRunning = false;
 
     bool isSwinging = false;
@@ -70,6 +71,11 @@ public class Movement : MonoBehaviour
         //Are we boots?
         if (legControl)
         {
+            if (!armControl && !isSwinging)
+            {
+                AIAttack();
+            }
+            
             movementDirection.x = inputDirection.x;
             movementDirection.y = inputDirection.y;
         }
@@ -98,7 +104,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown("space"))
             {
-                StartCoroutine(SwordBurstCor());
+                StartCoroutine(SwordBurstCor(0f));
             }
         }
 
@@ -133,11 +139,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-    IEnumerator SwordBurstCor()
+    IEnumerator SwordBurstCor(float waitTime)
     {
         isSwinging = true;
-        swordBurst.Emit(100);
-
+        yield return new WaitForSeconds(waitTime);
         float time = 0f;
         var start = Quaternion.identity;
         var end = Quaternion.Euler(0, 0, -90);
@@ -225,5 +230,11 @@ public class Movement : MonoBehaviour
             yield return null;
         }
         returningWeapon = false;
+    }
+
+    public void AIAttack()
+    {
+        float randomSwings = Random.Range(0.5f, 2.0f);
+        StartCoroutine(SwordBurstCor(randomSwings));
     }
 }
