@@ -48,6 +48,8 @@ public class Movement : MonoBehaviour
     public float returnPull;
     bool returningWeapon = false;
 
+    public AudioSource AudioSource;
+
     // Update is called once per frame
     void Update()
     {
@@ -143,6 +145,7 @@ public class Movement : MonoBehaviour
     {
         isSwinging = true;
         yield return new WaitForSeconds(waitTime);
+        WeaponNoise();
         float time = 0f;
         var start = Quaternion.identity;
         var end = Quaternion.Euler(0, 0, -90);
@@ -248,5 +251,10 @@ public class Movement : MonoBehaviour
         {
             pullSpeed = 0.5f;
         }
+    }
+
+    public void WeaponNoise()
+    {
+        AudioSource.Play();
     }
 }
