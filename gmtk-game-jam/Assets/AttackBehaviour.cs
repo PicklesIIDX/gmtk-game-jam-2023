@@ -8,7 +8,14 @@ public class AttackBehaviour : StateMachineBehaviour
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		var attacker = animator.GetComponent<Attacker>();
-		attacker.Attack(animator.transform.position, animator.transform.rotation, animator.gameObject.layer);
+		var player = PositionGetter.FindPlayer();
+		var attackRotation = Quaternion.identity;
+		if (player)
+		{
+			var targetVector = (player.transform.position - animator.transform.position ).normalized;
+			attackRotation = Quaternion.FromToRotation(Vector3.up, targetVector);
+		}
+		attacker.Attack(animator.transform.position, attackRotation, animator.gameObject.layer);
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

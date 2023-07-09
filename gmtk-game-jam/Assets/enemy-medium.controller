@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _findType: 1
+  _maxHuntRange: 8
 --- !u!1102 &-2621046368891105711
 AnimatorState:
   serializedVersion: 6
@@ -316,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterName: attackWindUp
-  startingTime: 1
+  startingTime: 0.2
 --- !u!114 &1109032579785097171
 MonoBehaviour:
   m_ObjectHideFlags: 1

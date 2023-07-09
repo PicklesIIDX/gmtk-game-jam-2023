@@ -24,6 +24,11 @@ public class Inventory : MonoBehaviour
 
     public void DropAll()
     {
+        StartCoroutine(DropSequence());
+    }
+
+    private IEnumerator DropSequence()
+    {
         droppedItems = new ItemDetails[items.Length];
         for (var i = 0; i < items.Length; i++)
         {
@@ -32,6 +37,7 @@ public class Inventory : MonoBehaviour
             instance.transform.position = transform.position;
             droppedItems[i] = instance.GetComponent<ItemDetails>();
             onDrop.Invoke(instance);
+            yield return new WaitForSecondsRealtime(0.3f);
         }
     }
 
