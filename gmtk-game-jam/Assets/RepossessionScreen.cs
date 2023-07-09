@@ -61,7 +61,6 @@ public class RepossessionScreen : MonoBehaviour
 
     private void OnHeroDeath(GameObject hero)
     {
-        //todo: get hero inventory
         var inventory = hero.GetComponentInChildren<Inventory>();
         StartCoroutine(timeSlowAnimator.SlowDownTime(() =>
         {

@@ -678,6 +678,10 @@ PrefabInstance:
       value: RepossessionScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7985264484168571837, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
+      propertyPath: startingItem
+      value: SWORD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985264484168571837, guid: d3df5cfc2e98b8e4289f9a99cd8fd741, type: 3}
       propertyPath: onSelectPossession.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1542787014}

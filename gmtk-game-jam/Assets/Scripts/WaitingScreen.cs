@@ -28,8 +28,14 @@
 			var movement = heroObject.GetComponentInChildren<Movement>();
 			if (movement)
 			{
-				movement.isSword = itemSelection.IsSword();
+				// debug
+				// movement.isSword = true;
+				// movement.legControl = true;
+				// regular
+				movement.isSword = true;
+				movement.armControl = itemSelection.IsSword();
 				movement.legControl = itemSelection.IsBoots();
+				
 			}
 			heroObject.transform.position = itemSelection.Position;
 		}
