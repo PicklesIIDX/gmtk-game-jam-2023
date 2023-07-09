@@ -1,0 +1,10 @@
+.chat-text {
+    white-space: normal;
+    -unity-font-definition: url('project://database/Assets/UI%20Toolkit/Kenney%20Thick%20SDF.asset?fileID=11400000&guid=dc7374ab8fd1c9d4e868e4d78bd0f92d&type=2#Kenney Thick SDF');
+    -unity-text-align: middle-left;
+    color: rgb(255, 255, 255);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

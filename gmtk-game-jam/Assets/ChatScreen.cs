@@ -10,6 +10,8 @@ public class ChatScreen : MonoBehaviour
     private VisualElement _textArea;
     [SerializeField] private bool flagSpeakSequence = false;
     [SerializeField] private Conversation _currentConversation;
+    [SerializeField] private float lineDelay = 1.0f;
+    [SerializeField] private float characterDelay = 0.03f;
     
     // Start is called before the first frame update
     void Start()
@@ -31,15 +33,23 @@ public class ChatScreen : MonoBehaviour
     {
         foreach (var chatEntry in conversation.ChatEntries)
         {
-            AddLine(chatEntry.Speaker, chatEntry.Line);
-            yield return new WaitForSeconds(1.0f);
+            yield return StartCoroutine(AddLine(chatEntry.Speaker, chatEntry.Line));
+            yield return new WaitForSeconds(lineDelay);
         }
     }
 
-    public void AddLine(string speaker, string line)
+    public IEnumerator AddLine(string speaker, string line)
     {
-        var textEntry = new Label(line);
-        textEntry.style.whiteSpace = new StyleEnum<WhiteSpace>(WhiteSpace.Normal);
+        var textEntry = new Label();
+        textEntry.AddToClassList("chat-text");
         _textArea.Insert(0, textEntry);
+        int index = 0;
+        while (index < line.Length)
+        {
+            index++;
+            textEntry.text = line.Substring(0, index);
+            yield return new WaitForSeconds(characterDelay);
+        }
+        
     }
 }
