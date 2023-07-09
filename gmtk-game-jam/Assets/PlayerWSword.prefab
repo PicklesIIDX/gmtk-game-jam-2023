@@ -404,6 +404,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
+      propertyPath: legControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908262189827364545, guid: d52e3db442b69bb4e8aa21ab421a2f66, type: 3}
       propertyPath: returnPull
       value: 1
       objectReference: {fileID: 0}
