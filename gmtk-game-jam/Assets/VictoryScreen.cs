@@ -17,12 +17,6 @@ public class VictoryScreen : MonoBehaviour
         document.rootVisualElement.visible = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     [ContextMenu("Show")]
     public void ShowVictory()
     {
