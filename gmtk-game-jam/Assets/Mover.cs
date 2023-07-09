@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,10 @@ public class Mover : MonoBehaviour
 	public Vector3 TargetPosition;
 	public UnityEvent<Vector2> onMove;
 
+	private void Awake()
+	{
+		body2D.freezeRotation = true;
+	}
 
 	public bool Move()
 	{
@@ -25,7 +30,8 @@ public class Mover : MonoBehaviour
 			{
 				var targetVector = (TargetPosition - transform.position).normalized;
 				body2D.velocity = (targetVector * speed);
-				transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
+				body2D.rotation = Vector2.Angle(TargetPosition, transform.position);
+				//transform.rotation = Quaternion.FromToRotation(Vector3.up, targetVector);
 				onMove.Invoke(body2D.velocity);
 			}
 		}
@@ -42,7 +48,6 @@ public class Mover : MonoBehaviour
 	public void Stop()
 	{
 		body2D.velocity = Vector2.zero;
-		body2D.totalTorque = 0;
 		onMove.Invoke(body2D.velocity);
 	}
 	

@@ -24,7 +24,7 @@ public class FindPosition : StateMachineBehaviour
                 position = PositionGetter.FindNewPositionNearHeroWithinRange(mover.transform.position, _maxHuntRange);
                 break;
             case FindType.AvoidHero:
-                position = PositionGetter.FindPositionAwayFromHero(mover.transform.position, 6f);
+                position = PositionGetter.FindPositionAwayFromHero(mover.transform.position, 6f, _maxHuntRange);
                 break;
         }
         mover.TargetPosition = position;
