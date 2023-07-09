@@ -244,9 +244,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3982705471355646530, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
+      propertyPath: m_AssetsPPU
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6792167602801299413, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
       propertyPath: orthographic size
-      value: 4.0333333
+      value: 6.05
       objectReference: {fileID: 0}
     - target: {fileID: 8344688156240297976, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
       propertyPath: m_Name

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: conversation-01
+  m_EditorClassIdentifier: Assembly-CSharp:DefaultNamespace:Conversation
+  ChatEntries:
+  - Speaker: SWORD
+    Line: I know this is a lot right now but I'm a sword and I'm possesing you.
+  - Speaker: HERO
+    Line: OH GOD I CAN'T FEEL MY ARM
+  - Speaker: SWORD
+    Line: Not so loud you'll wake the birds!
