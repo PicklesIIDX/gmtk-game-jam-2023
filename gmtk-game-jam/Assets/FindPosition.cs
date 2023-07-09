@@ -30,7 +30,7 @@ public class FindPosition : StateMachineBehaviour
         mover.TargetPosition = position;
         animator.SetBool("hasPosition", true);
         animator.SetFloat("distanceToHero", 99);
-        animator.SetBool("reachedPosition", false);
+        // animator.SetBool("reachedPosition", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

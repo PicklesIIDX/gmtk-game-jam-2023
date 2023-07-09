@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Label tabindex="-1" text="YOU LIE DORMANT WAITING FOR..." display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
-    <ui:Label tabindex="-1" text="0 DAYS" display-tooltip-when-elided="true" name="waiting-for" style="font-size: 46px; -unity-text-align: middle-center;" />
+    <Style src="project://database/Assets/UI%20Toolkit/font.uss?fileID=7433441132597879392&amp;guid=5e754924da007434f97fe9642f300647&amp;type=3#font" />
+    <ui:Label tabindex="-1" text="YOU LIE DORMANT WAITING FOR..." display-tooltip-when-elided="true" class="chat-text" style="-unity-text-align: upper-center;" />
+    <ui:Label tabindex="-1" text="0 DAYS" display-tooltip-when-elided="true" name="waiting-for" class="chat-text" style="font-size: 46px; -unity-text-align: middle-center;" />
 </ui:UXML>

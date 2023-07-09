@@ -1,7 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/font.uss?fileID=7433441132597879392&amp;guid=5e754924da007434f97fe9642f300647&amp;type=3#font" />
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:Label tabindex="-1" text="YOUR HERO HAS DIED" display-tooltip-when-elided="true" style="justify-content: center; align-items: center; -unity-text-align: middle-center;" />
-        <ui:Label tabindex="-1" text="Select an item to posses" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="YOUR HERO HAS DIED" display-tooltip-when-elided="true" name="Label" class="chat-text" style="justify-content: center; align-items: center; -unity-text-align: middle-center;" />
+        <ui:Label tabindex="-1" text="Select an item to possess" display-tooltip-when-elided="true" class="chat-text" style="-unity-text-align: upper-center;" />
         <ui:VisualElement name="button-holder" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
     </ui:VisualElement>
 </ui:UXML>

@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4348255624973503818, guid: a9cdd9aa819821949b8444b9bf50f88b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7294295146635760929, guid: a9cdd9aa819821949b8444b9bf50f88b, type: 3}
       propertyPath: m_Name
       value: ChatScreen
@@ -757,7 +761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1975110050}
   - component: {fileID: 1975110053}
-  - component: {fileID: 1975110052}
   - component: {fileID: 1975110051}
   m_Layer: 0
   m_Name: IntroSceneRenderer
@@ -826,14 +829,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1975110052
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975110049}
-  m_Enabled: 1
 --- !u!20 &1975110053
 Camera:
   m_ObjectHideFlags: 0
