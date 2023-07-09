@@ -4987,7 +4987,6 @@ MonoBehaviour:
   maxChainDistance: 0
   returnTime: 0
   returnPull: 0
-  swingSound: {fileID: 0}
   AudioSource: {fileID: 5218773085879411054}
 --- !u!61 &1921704323939161207
 BoxCollider2D:
@@ -5044,7 +5043,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b8a8d93faf28076488f5926a68adf709, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6118bd6e373f2b4eb4e31f3ff60ca4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

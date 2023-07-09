@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.52
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,18 +70,62 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 4e12770c70cf8384ca2958b0879d40d1, type: 2}
     - target: {fileID: 7236305611414145628, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: range
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236305611414145628, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: speed
-      value: 1.8
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 9030893632910654383, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6673758375516386788, guid: fd76493527db45b4390d2209d929c936, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4180787791879720077, guid: fd76493527db45b4390d2209d929c936, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5832071070638796832}
   m_SourcePrefab: {fileID: 100100000, guid: fd76493527db45b4390d2209d929c936, type: 3}
+--- !u!1 &4011344906221110987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4180787791879720077, guid: fd76493527db45b4390d2209d929c936, type: 3}
+  m_PrefabInstance: {fileID: 985739288407050822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &5832071070638796832
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011344906221110987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
