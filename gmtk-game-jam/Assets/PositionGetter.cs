@@ -27,7 +27,7 @@ public abstract class PositionGetter
 			if(results[0].distance < distance && results[0].distance > 2)
 			{
 				var contactPoint = results[0].point - randomDirection * 0.5f;
-				Debug.Log($"adjusted position to hit point {contactPoint}");
+				// Debug.Log($"adjusted position to hit point {contactPoint}");
 				return contactPoint;
 			}
 			else if(results[0].distance >= distance)
@@ -35,7 +35,7 @@ public abstract class PositionGetter
 				return randomNearbyPosition;
 			}
 		}
-		Debug.LogError($"failed to find position after {directions.Length} attempts");
+		// Debug.LogError($"failed to find position after {directions.Length} attempts");
 		return currentPosition;
 	}
 	
