@@ -30,6 +30,8 @@ public class RepossessionScreen : MonoBehaviour
             {
                 text = selection.Item,
             };
+            itemButton.AddToClassList("chat-text");
+            itemButton.style.backgroundColor = new StyleColor(new Color(.1f, .1f, .1f));
             itemButton.RegisterCallback<ClickEvent, ItemSelection>(OnSelectItem, selection);
             buttonHolder.Add(itemButton);
         }
