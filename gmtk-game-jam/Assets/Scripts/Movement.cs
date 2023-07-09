@@ -237,4 +237,16 @@ public class Movement : MonoBehaviour
         float randomSwings = Random.Range(0.5f, 2.0f);
         StartCoroutine(SwordBurstCor(randomSwings));
     }
+
+    public void AdjustSwingPull(bool newPull)
+    {
+        if (newPull)
+        {
+            pullSpeed = 0.3f;
+        }
+        else
+        {
+            pullSpeed = 0.5f;
+        }
+    }
 }

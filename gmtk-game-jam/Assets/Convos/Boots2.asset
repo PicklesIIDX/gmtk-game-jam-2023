@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Boots2
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: These boots were made for RUNNING!
+  - Speaker: HERO
+    Line: Woah woah why am I running?!
+  - Speaker: ITEM
+    Line: You chop. I run. We stay a live and kill some shit a long the way. You
+      in?
+  - Speaker: HERO
+    Line: What?! No!? I found this sword and boots, hoping to sell them.
+  - Speaker: ITEM
+    Line: Oh, you didn't mean to pick up a cursed item, kill a bunch of items, and
+      die for me?
+  - Speaker: HERO
+    Line: Die for you?!
+  - Speaker: ITEM
+    Line: I mean, be my best friend?
+  - Speaker: HERO
+    Line: What? What is happening!?
+  - Speaker: ITEM
+    Line: Just go with it.

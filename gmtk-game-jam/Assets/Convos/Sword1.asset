@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Sword1
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: SWORD
+    Line: HEY! Holy crap! OK I know this is a lot to take in but I'm a sword and
+      I'm possessing you.
+  - Speaker: HERO
+    Line: What is happening? What are you?
+  - Speaker: SWORD
+    Line: I'm a Sword. Well I'm a cursed sword. Well really just a curse and I need
+      you to kill a Wizard.
+  - Speaker: HERO
+    Line: This is a lot.
+  - Speaker: SWORD
+    Line: I'm a Sword. Well I'm a cursed sword. Well really just a curse and I need
+      you to kill a Wizard.
+  - Speaker: HERO
+    Line: Solid point.
+  - Speaker: SWORD
+    Line: I see what you did there.

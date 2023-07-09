@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Random6
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: I hate to do this to ya, but I'm possessing you so we can kill a Wizard.
+  - Speaker: HERO
+    Line: I new my life had meaning! I shall tell this tale to my children's children.
+  - Speaker: ITEM
+    Line: No, you're nothing special. You just picked me up. Literally a child could
+      do this.
+  - Speaker: HERO
+    Line: I have been chosen by the gods!
+  - Speaker: ITEM
+    Line: Seeing you die may be as satisfying as seeing the Wizard die.

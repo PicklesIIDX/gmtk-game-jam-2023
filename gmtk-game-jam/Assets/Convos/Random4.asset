@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Random4
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: Thanks for picking me up. Don't want to get into it, but I was turned into
+      a cursed item and now I need you to help me kill the wizard who did this.
+  - Speaker: HERO
+    Line: Oh you poor soul. I will avenge you and slay this wizard who did this to
+      you for I am Mart-
+  - Speaker: ITEM
+    Line: Ah ah ah. No names. You're probably gonna die in a few seconds so best
+      not to get attached.
+  - Speaker: HERO
+    Line: Oh. Well... that's grim. It's Marty, the names Marty.
+  - Speaker: ITEM
+    Line: I do not care.

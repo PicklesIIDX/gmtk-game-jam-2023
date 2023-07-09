@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Random9
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: Killing monsters with you isn't half bad.
+  - Speaker: HERO
+    Line: Are you ever going to stop controlling me?
+  - Speaker: ITEM
+    Line: Are we really gonna do this right now? Seriously, after all I've been through?
+  - Speaker: HERO
+    Line: 'I just feel like we should have this conversation before things get any
+      further. '
+  - Speaker: ITEM
+    Line: Lets just see how things go. I don't think either of us are ready for commitment
+      right now.

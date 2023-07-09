@@ -250,6 +250,10 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6792167602801299413, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
+      propertyPath: orthographic size
+      value: 4.633333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792167602801299413, guid: 32cd4f73b6fdaa14abad921efc2ed972, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0.0754717
       objectReference: {fileID: 0}
@@ -1724,6 +1728,10 @@ PrefabInstance:
     - target: {fileID: 7269532135581325761, guid: 2e53f9c156fa75343af1b7bf7f0fc065, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593517313185611104, guid: 2e53f9c156fa75343af1b7bf7f0fc065, type: 3}
+      propertyPath: pullSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7593517313185611104, guid: 2e53f9c156fa75343af1b7bf7f0fc065, type: 3}
       propertyPath: returnSpeed
