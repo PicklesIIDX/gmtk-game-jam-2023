@@ -486,6 +486,8 @@ MonoBehaviour:
   _document: {fileID: 1958772831}
   flagSpeakSequence: 0
   _currentConversation: {fileID: 11400000, guid: f0495296845ab6445885746c192609ca, type: 2}
+  lineDelay: 1
+  characterDelay: 0.03
 --- !u!212 &1923970735850438031
 SpriteRenderer:
   m_ObjectHideFlags: 0
