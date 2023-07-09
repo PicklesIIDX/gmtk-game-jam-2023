@@ -8,8 +8,10 @@ public class FindVictoryScreen : MonoBehaviour
     void Start()
     {
         var victoryScreen = GameObject.FindWithTag("Victory").GetComponent<VictoryScreen>();
-        GetComponent<Hurtable>().onZero.AddListener((_) => victoryScreen.ShowVictory());
-
+        GetComponent<Hurtable>().onZero.AddListener((_) =>
+        {
+            victoryScreen.ShowVictory();
+        });
     }
 
     // Update is called once per frame

@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921646322975888314, guid: aa86755b8e501f243b9302bde0753351, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157081319776317682, guid: aa86755b8e501f243b9302bde0753351, type: 3}
       propertyPath: onVictory.m_PersistentCalls.m_Calls.Array.size
@@ -535,6 +535,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   animator: {fileID: 425319907}
+  _audioSource: {fileID: 1386208865}
 --- !u!4 &1386208864
 Transform:
   m_ObjectHideFlags: 0
@@ -562,7 +563,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4927299ebb144b34186f7f94eaaf19ab, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

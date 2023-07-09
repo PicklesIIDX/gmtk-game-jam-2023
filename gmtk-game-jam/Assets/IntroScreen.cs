@@ -7,6 +7,7 @@ public class IntroScreen : MonoBehaviour
 {
     [SerializeField] private UnityEvent onIntroComplete;
     public Animator animator;
+    [SerializeField] private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,18 @@ public class IntroScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            StopCoroutine(AnimationPart1());
+            StopCoroutine(AnimationPart2());
+            StopCoroutine(AnimationPart3());
+            _audioSource.Stop();
+            onIntroComplete.Invoke();
+        }
     }
     IEnumerator AnimationPart1()
     {
+        _audioSource.Play();
         yield return new WaitForSeconds(8);
         animator.SetTrigger("next");
         StartCoroutine(AnimationPart2());
