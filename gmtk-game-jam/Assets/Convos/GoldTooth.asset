@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: GoldTooth
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: TOOTH
+    Line: Do you brush your teeth ever!?
+  - Speaker: HERO
+    Line: Are you in my mouth?!
+  - Speaker: TOOTH
+    Line: I'd rather be dead. Blurg - I'm gonna throw up. Can I throw up?
+  - Speaker: HERO
+    Line: Don't throw up in my mouth. Does that mean I throw up or you throw up?
+  - Speaker: TOOTH
+    Line: Why are we having this conversation?

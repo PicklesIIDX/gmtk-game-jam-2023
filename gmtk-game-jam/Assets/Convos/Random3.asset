@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Random3
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: I'm gonna miss you when you die Frank.
+  - Speaker: HERO
+    Line: My name's not Frank. You don't have a mouth. How are you even making noise.
+  - Speaker: ITEM
+    Line: Magic! Duh. Haven't you read a single Harry Potter booK?
+  - Speaker: HERO
+    Line: That series doesn't make sense. Where does the "Magic" come from?
+  - Speaker: ITEM
+    Line: It's magic! It comes from being magical.
+  - Speaker: HERO
+    Line: You're aware just how dumb that sounds?
+  - Speaker: ITEM
+    Line: I don't care if I have to wait another 1000 years, please put me down.

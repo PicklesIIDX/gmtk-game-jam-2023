@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Boots1
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: BOOTS
+    Line: WOW do your feet smell. Please can we die fast.
+  - Speaker: HERO
+    Line: Did you just talk? Why can't I control my feet?!
+  - Speaker: BOOTS
+    Line: You put on a pair of boots you found in a dungeon and think you can ask
+      questions when weird stuff starts happening?

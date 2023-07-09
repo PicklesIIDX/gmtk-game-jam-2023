@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b9c401c3142cdabf94e84c7617323, type: 3}
+  m_Name: Random5
+  m_EditorClassIdentifier: 
+  ChatEntries:
+  - Speaker: ITEM
+    Line: Time to kill an old man!
+  - Speaker: HERO
+    Line: What!? No I'm not going to kill an old man! I'm a hero!
+  - Speaker: ITEM
+    Line: Hero or not, you picked me up so I'm possessing you and we're gonna kill
+      this old dude.
+  - Speaker: HERO
+    Line: No! No... we can't! You can't do this, I wont let you.
+  - Speaker: ITEM
+    Line: Clearly you don't have a say in this. Besides you'll probably die before
+      we get to him
+  - Speaker: HERO
+    Line: I'll tell everyone it was you who made me do it!
+  - Speaker: ITEM
+    Line: The talking sword made me kill the old man? Yeah that's gonna go over real
+      well.
