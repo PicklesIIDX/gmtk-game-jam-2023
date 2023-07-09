@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: attackObject
       value: 
       objectReference: {fileID: 7880119191440834587, guid: 1cee4e52eedf5234a96e069ea2f45391, type: 3}
+    - target: {fileID: 3538690537973962541, guid: fd76493527db45b4390d2209d929c936, type: 3}
+      propertyPath: hp
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4180787791879720077, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_Name
       value: enemy-medium
