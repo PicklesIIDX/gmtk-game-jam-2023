@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 6798588795831970007, guid: fd76493527db45b4390d2209d929c936, type: 3}
+      propertyPath: damage
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7236305611414145628, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: speed
       value: 8

@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6511572250877795231, guid: fd76493527db45b4390d2209d929c936, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,7 +86,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4180787791879720077, guid: fd76493527db45b4390d2209d929c936, type: 3}
-      insertIndex: -1
+      insertIndex: 8
       addedObject: {fileID: 5832071070638796832}
   m_SourcePrefab: {fileID: 100100000, guid: fd76493527db45b4390d2209d929c936, type: 3}
 --- !u!1 &4011344906221110987 stripped
