@@ -15,6 +15,7 @@
 		[SerializeField] private UnityEvent onWaitingComplete;
 
 		[SerializeField] private Spawn _heroSpawn;
+		[SerializeField] private UnityEvent<ItemSelection> onHeroPossessed; 
 
 		private void Awake()
 		{
@@ -40,6 +41,7 @@
 				
 			}
 			heroObject.transform.position = itemSelection.Position;
+			onHeroPossessed.Invoke(itemSelection);
 		}
 
 		[SerializeField] private AnimationCurve animationCurve;

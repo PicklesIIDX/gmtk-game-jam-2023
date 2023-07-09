@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Boots2
   m_EditorClassIdentifier: 
   ChatEntries:
-  - Speaker: ITEM
+  - Speaker: BOOTS
     Line: These boots were made for RUNNING!
   - Speaker: HERO
     Line: Woah woah why am I running?!
-  - Speaker: ITEM
+  - Speaker: BOOTS
     Line: You chop. I run. We stay a live and kill some shit a long the way. You
       in?
   - Speaker: HERO
     Line: What?! No!? I found this sword and boots, hoping to sell them.
-  - Speaker: ITEM
+  - Speaker: BOOTS
     Line: Oh, you didn't mean to pick up a cursed item, kill a bunch of items, and
       die for me?
   - Speaker: HERO
     Line: Die for you?!
-  - Speaker: ITEM
+  - Speaker: BOOTS
     Line: I mean, be my best friend?
   - Speaker: HERO
     Line: What? What is happening!?
-  - Speaker: ITEM
+  - Speaker: BOOTS
     Line: Just go with it.

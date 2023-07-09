@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class VictoryScreen : MonoBehaviour
@@ -8,6 +9,8 @@ public class VictoryScreen : MonoBehaviour
     [SerializeField] private UIDocument document;
 
     [SerializeField] private TimeSlowAnimator timeSlowAnimator;
+
+    [SerializeField] private UnityEvent onVictory;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class VictoryScreen : MonoBehaviour
     {
         StartCoroutine(timeSlowAnimator.SlowDownTime(() =>
         {
+            onVictory.Invoke();
             document.rootVisualElement.visible = true;
         }));
     }

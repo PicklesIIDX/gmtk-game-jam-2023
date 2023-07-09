@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 4614443550994538149}
   - component: {fileID: 442501824709265864}
   - component: {fileID: 2637474467065751821}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -522,9 +522,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380626806299579051}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HERO
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

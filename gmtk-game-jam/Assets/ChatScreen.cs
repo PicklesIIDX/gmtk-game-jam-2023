@@ -15,6 +15,7 @@ public class ChatScreen : MonoBehaviour
     [SerializeField] private bool flagSpeakSequence = false;
     [SerializeField] private Conversation _currentConversation;
     [SerializeField] private Conversation[] _conversations = Array.Empty<Conversation>();
+    private string _currentItem = "SWORD";
     [SerializeField] private float lineDelay = 1.0f;
     [SerializeField] private float characterDelay = 0.03f;
     
@@ -36,7 +37,9 @@ public class ChatScreen : MonoBehaviour
 
     void SelectConversation(string condition)
     {
-        var validConversations = _conversations.Where(x => x.ChatEntries.Any(x => x.Speaker == condition)).ToList();
+        var validConversations = _conversations
+            .Where(x => x.ChatEntries
+                .Any(x => x.Speaker == condition || x.Speaker == "ITEM")).ToList();
         if (validConversations.Count == 0)
         {
             return;
@@ -77,6 +80,10 @@ public class ChatScreen : MonoBehaviour
     [SerializeField] private Transform _nonSpeakerHolder;
     public void SetSpeaker(string speaker)
     {
+        if (speaker == "ITEM")
+        {
+            speaker = _currentItem;
+        }
         if (_speakerHolder.childCount > 0)
         {
             var lastSpeaker = _speakerHolder.GetChild(0);
@@ -94,5 +101,11 @@ public class ChatScreen : MonoBehaviour
             }
         }
         Debug.LogError($"no speaker '{speaker}'");
+    }
+
+    public void OnHeroPossessed(ItemSelection itemSelection)
+    {
+        _currentItem = itemSelection.Item;
+        SelectConversation(_currentItem);
     }
 }

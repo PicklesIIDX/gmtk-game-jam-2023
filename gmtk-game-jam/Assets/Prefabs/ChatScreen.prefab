@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 4348255624973503818}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &759474817422333280
 MonoBehaviour:
@@ -65,6 +65,22 @@ MonoBehaviour:
   _document: {fileID: 759474817422333280}
   flagSpeakSequence: 0
   _currentConversation: {fileID: 11400000, guid: f0495296845ab6445885746c192609ca, type: 2}
+  _conversations:
+  - {fileID: 11400000, guid: 10472f41d10d84046a398b1abc8ab116, type: 2}
+  - {fileID: 11400000, guid: 9bd8abe0d9db92d4b8e84f78083841ab, type: 2}
+  - {fileID: 11400000, guid: b6671567d0dcc2f4cbc138a7c206bccf, type: 2}
+  - {fileID: 11400000, guid: 06e0040cddeeb2445adc9df49d11938e, type: 2}
+  - {fileID: 11400000, guid: 6c1631ff10dc9fa46ba297aaef668d86, type: 2}
+  - {fileID: 11400000, guid: 5ef02a432ba2e674bbb61fcfacf5bb19, type: 2}
+  - {fileID: 11400000, guid: d1da5996143cad6498d7ebd084ad646c, type: 2}
+  - {fileID: 11400000, guid: 768fbb2a10dbcad46b8db65538eda9fb, type: 2}
+  - {fileID: 11400000, guid: 47998f8e0da61064487bc37f4d887543, type: 2}
+  - {fileID: 11400000, guid: 136a5d074d544754eb8c2d8e5842e6ea, type: 2}
+  - {fileID: 11400000, guid: 8f42d579eeca88548ab49295df055abe, type: 2}
+  - {fileID: 11400000, guid: 5b78c0f0c56aa134483604dc5a3b1767, type: 2}
+  - {fileID: 11400000, guid: d84ccf8aa8dbaf543a83ce1c482ca7c5, type: 2}
+  - {fileID: 11400000, guid: 41b38015b1e756744b2eb79854d09e10, type: 2}
+  - {fileID: 11400000, guid: a9507163ec3109c4fa36118a28abd604, type: 2}
   lineDelay: 1
   characterDelay: 0.03
   _speakerHolder: {fileID: 1965922418830862895}
