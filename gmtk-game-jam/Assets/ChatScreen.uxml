@@ -7,9 +7,7 @@
                 <ui:VisualElement name="portrait" style="flex-grow: 1; background-color: rgb(0, 0, 0); flex-wrap: nowrap; background-image: url(&apos;project://database/Assets/ChatTexture.renderTexture?fileID=8400000&amp;guid=035d6ed7df712c942b741953bc084fb7&amp;type=2#ChatTexture&apos;); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; border-top-left-radius: 13px; border-bottom-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="text-area" style="flex-grow: 0; background-color: rgb(29, 29, 29); flex-shrink: 0; flex-wrap: wrap; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
-                <ui:Label tabindex="-1" text="This is some like....prettty funny line right here" display-tooltip-when-elided="true" class="chat-text" />
-                <ui:Label tabindex="-1" text="This is another ecample just for us to see what happens. Lets see if we keep going and going and going and yep this is fine." display-tooltip-when-elided="true" class="chat-text" style="white-space: normal; -unity-text-align: middle-left;" />
-                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" class="chat-text" style="white-space: normal;" />
+                <ui:Label tabindex="-1" text="Now imma cursed sword!" display-tooltip-when-elided="true" class="chat-text" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
