@@ -29,12 +29,13 @@
 			if (movement)
 			{
 				// debug
-				// movement.isSword = true;
-				// movement.legControl = true;
+				movement.isSword = true;
+				movement.armControl = true;
+				movement.legControl = true;
 				// regular
 				movement.isSword = true;
-				movement.armControl = itemSelection.IsSword();
-				movement.legControl = itemSelection.IsBoots();
+				// movement.armControl = itemSelection.IsSword();
+				// movement.legControl = itemSelection.IsBoots();
 				
 			}
 			heroObject.transform.position = itemSelection.Position;
